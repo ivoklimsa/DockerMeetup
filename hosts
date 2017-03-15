@@ -1,2 +1,0 @@
-[azure]
-docker-01.westeurope.cloudapp.azure.com ansible_user=solarwinds ansible_become=true

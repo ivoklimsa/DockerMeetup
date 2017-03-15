@@ -1,0 +1,8 @@
+- hosts: all
+  gather_facts: yes
+  serial: "50%"
+  become: true
+  tasks:
+    - service:
+        name: docker
+        state: started

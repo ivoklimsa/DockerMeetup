@@ -3,12 +3,6 @@
   serial: "50%"
   become: true
   tasks:
-    - name: Update OS (RedHat, CentOS)
-      yum: name=*
-           state=latest
-           update_cache=yes
-      when: ansible_os_family == "RedHat"
-
     - name: Add Docker repository docker-ce-stable
       yum_repository:
         name: Docker CE Stable - $basearch
@@ -22,3 +16,7 @@
       yum:
         name: docker
         state: latest
+
+    - service:
+        name: docker
+        state: started

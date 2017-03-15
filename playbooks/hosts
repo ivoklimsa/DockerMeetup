@@ -1,0 +1,3 @@
+[azure]
+docker-[01:20].westeurope.cloudapp.azure.com ansible_user=solarwinds ansible_become=true
+docker-[21:22].southcentralus.cloudapp.azure.com ansible_user=solarwinds ansible_become=true

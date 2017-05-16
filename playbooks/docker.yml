@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: azure
   gather_facts: yes
   serial: "50%"
   become: true
@@ -19,4 +19,4 @@
 
     - service:
         name: docker
-        state: started
+        enabled: yes

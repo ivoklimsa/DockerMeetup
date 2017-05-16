@@ -6,3 +6,5 @@
     - service:
         name: docker
         state: started
+    - name: Test Docker
+      command: docker run hello-world

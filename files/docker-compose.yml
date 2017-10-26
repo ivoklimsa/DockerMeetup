@@ -1,0 +1,18 @@
+version: "3"
+services:
+
+  iis:
+    image: microsoft/iis
+    deploy:
+      placement:
+        constraints: [node.platform.os == windows]
+    ports:
+     - "8080:80"
+
+  web:
+    image: httpd:alpine
+    deploy:
+      placement:
+        constraints: [node.platform.os == linux]
+    ports:
+      - "80:80"
